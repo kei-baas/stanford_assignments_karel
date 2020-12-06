@@ -1,0 +1,10 @@
+1.git init
+1.create somefiles
+1.add them 
+1.commit them 
+1.create a remote origin with git remote add <origin> master || you can create it in github and forget
+this step 
+1.push the things to the remote origin -> git remote push  -set-upstream
+1.git push --set-upstream https://github.com/kei-baas/stanford_assignments_karel.git master
+1. after you do this step you can confidently just say git push origin or git push 
+
