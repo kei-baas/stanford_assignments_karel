@@ -1,0 +1,212 @@
+
+-------------COLLECT NEWSPAPER KAROL PROGRAM --------
+def main() :
+    # in this line we program the karel to reach something
+    move_down()
+    while front_is_clear() :
+        if beeper_present() :
+            pick_beeper()
+            move_back()
+            break
+        else :
+            move()
+            # move until reach some beeper
+
+    exit()
+    #  if you exit here means there is no newspaper for taking
+
+
+
+def turn_right() :
+    # there is nothing to say about it
+    turn_left()
+    turn_left()
+
+def move_back() :
+    moveback to some spot in the world
+    turn_round()
+    while front_is_clear() :
+        move()
+    move_up()
+
+
+def turn_round() :
+    # turn the karel round
+    turn_right()
+    turn_right()
+
+def moveDown() :
+    # move karel one step down and return to the current position
+    turn_right()
+    move()
+    turn_round()
+def move_up() :
+    # move up will done the ending job for us
+    turn_left()
+    move()
+    turn_left()
+
+----------CREATE A RAMP KAREL PROGRAM----------
+def main() :
+    while_front_is_clear():
+        put_beeper()
+        move_up()
+        double_move()
+    put_beeper()
+
+
+
+def double_move() :
+    move()
+    move()
+
+
+def move_up() :
+    turnLeft()
+    move()
+    turn_right()
+
+def turn_right() :
+    turn_left()
+    turn_left()
+----------CREATE A RAMP KAREL PROGRAM----------
+
+----------MAIN QUAD PROBLEM----------
+def main() :
+    while front_is_clear() :
+
+        fill_the_colums()
+        go_for_next_hole()
+        fill_the_colums_downward()
+        go_for_next_hole()
+
+    fill_the_colums()
+    # this is ares the off by one loops
+    # we need some post condition statments to handle this issue
+
+
+def go_for_next_hole() :
+    # here we assume that we face the east
+    while front_is_clear() :
+        if north_is_blocked() :
+            break;
+        move()
+
+
+def fill_the_colums_downward() :
+    while south_is_clear() :
+        if beeper_present() :
+            move_down()
+        else :
+            put_beeper()
+            move_down()
+    # here means you are in the down side of the world
+
+
+def fill_the_colums() :
+    while north_is_clear() :
+        if beeper_present() :
+            move_up()
+        else :
+            put_beeper()
+            move_up()
+
+def move_down() :
+    turn_right()
+    move()
+    turn_left()
+    # this will make the karel to the initial position
+
+
+
+def turn_right() :
+    turn_left()
+    turn_left()
+def turn_round() :
+    turn_right()
+    turn_right()
+
+def move_up() :
+
+    turn_left()
+    move()
+    turn_right()
+
+
+----------MAIN QUAD PROBLEM----------
+
+
+-----------CHEKERBOARD PROBLEM ----------
+
+def main() :
+    while not up_block  and down_clear() :
+        fill_the_right() //we have a inner jump for left for it
+        fill_the_left() // we have a inner jump for right for it
+    exit()
+    # this means you done the program for every fucking size
+
+
+
+
+
+
+def turn_right() :
+    turn_left()
+    turn_left()
+
+
+def turn_round() :
+    turn_right()
+    turn_right()
+
+def fill_to_right() :
+    if face_east() :
+        while front_is_clear() :
+            put_beeper()
+            move()
+            jump_for_left()
+        jump
+    else :
+        turn_right()
+        fill_to_right()
+
+
+def jump_for_left() :
+    turn_left()
+    move()
+    turn_left()
+
+
+
+def jump_for_right() :
+    turn_left()
+    move()
+    turn_left()
+
+
+
+def fill_to_left() :
+    if face_west() :
+        while front_is_clear() :
+            put_beeper()
+            move()
+        jump_for_right()
+    else :
+        turn_left()
+        move()
+
+
+
+
+
+
+
+
+---------CHECKERBOARD PROBLEM ----------
+
+
+
+
+
+
+
